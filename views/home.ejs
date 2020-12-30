@@ -1,16 +1,25 @@
 
 <%- include("partials/header"); -%>
-
+<div class="row">
+  <div class="col-lg-6 col-sm-6" style="  text-align: justify;text-justify: inter-word;">
     <h1>Home</h1>
     <p> <%= startingContent %> </p>
     <a href="/compose"><button class="btn btn-primary">Post Your Blog</button></a>
+  </div>
+  <div class="col-lg-6 col-sm-6 justify-content-center">
+    <img class="img align-items-sm-center" src="cde.jpg" alt="">
+    <img class="img align-items-sm-center" src="technophilia.jpg" alt="">
+  </div>
+
+</div>
+
 
 
   <%  posts.forEach(function(post){ %>
 
     <h1><%=post.title%></h1>
     <h4>by- <%=post.authorName%></h4>
-      <h5><em><%=post.date%></em> <br> <%=post.time%></h5>
+      <h5><em><%=post.date%></em></h5>
 
     <p><b>Ph no: <%=post.contact%></b></p>
 
