@@ -75,7 +75,7 @@ const requestedPostId = req.params.postId;
       title: post.title,
       authorName:post.authorName,
       contact: post.contact,
-      date:"",
+      date: post.date,
       content: post.content
     });
   });
