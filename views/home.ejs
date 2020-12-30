@@ -9,6 +9,11 @@
   <%  posts.forEach(function(post){ %>
 
     <h1><%=post.title%></h1>
+    <h4>by- <%=post.authorName%></h4>
+      <h5><em><%=post.date%></em> <br> <%=post.time%></h5>
+
+    <p><b>Ph no: <%=post.contact%></b></p>
+
     <p>
     <%=post.content.substring(0, 100) + " ..."%>
     <a href="/posts/<%=post._id%>">Read More</a>
