@@ -4,7 +4,6 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const mongoose = require('mongoose');
-// const date=require(__dirname + "/date&time.js")
 
 
 const homeStartingContent = "You don’t have to work in the technology industry or offer image moderation software or video moderation API  like we do to benefit from the best tech blogs today.In hopes of lighting your content marketing strategy on fire, we created this technology blogs list to help you find the most influential tech bloggers to follow for your business. You may also find some of these information technology blogs interesting from a personal perspective, so dig in and learn something new today."
@@ -16,8 +15,6 @@ app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
-// let day=date.getdate()
-// let time=date.gettime()
 
 mongoose.connect("mongodb+srv://admin-shamindra:test123@cluster0.rmmzh.mongodb.net/blogDB", {useNewUrlParser: true,useUnifiedTopology:true});
 
@@ -57,7 +54,7 @@ app.post("/compose", function(req, res){
   const post = new Post({
     title: req.body.postTitle,
     authorName: req.body.postAuthor,
-        contact: req.body.postContact,
+    contact: req.body.postContact,
     content: req.body.postBody
   });
 
@@ -78,7 +75,7 @@ const requestedPostId = req.params.postId;
       title: post.title,
       authorName:post.authorName,
       contact: post.contact,
-      date: post.date,
+      date:"",
       content: post.content
     });
   });
@@ -117,7 +114,6 @@ if(port == null || port == "")
 {
   port = 3000;
 }
-//app.listen(port)
 app.listen(port, function() {
   console.log("Server started Successfully");
 });
