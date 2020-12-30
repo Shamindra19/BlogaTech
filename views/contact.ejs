@@ -1,0 +1,17 @@
+<%- include("partials/header"); -%>
+    <h1>Contact</h1>
+    <p> <%= contactContent %> </p>
+    <br>
+    <h4>Enter your details here to get your login credentials</h4>
+    <form action="mailto:akash19.ms00@gmail.com" method="post" enctype="text/plain">
+      <label>Your Full Name:</label>
+  		<input type="text" name="Your Name:" placeholder="Full Name" required><br>
+  		<label>Phone Number:</label>
+  		<input type="tel" id="phone" name="phone" placeholder="+91-XXXXXXXXXX" required>
+  		<label for="">E-mail Address:</label>
+  		<input type="email" name="Email" placeholder="e-mail" required><br><br>
+  		<label>Leave your Message here:</label><br>
+      <textarea name="Your Message:" rows="8" placeholder="E.g- I want to be a Admin..." cols="80"></textarea><br>
+      <input type="submit" name="" value="submit">
+    </form>
+<%- include("partials/footer"); -%>
